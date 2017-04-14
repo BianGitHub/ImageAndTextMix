@@ -26,6 +26,7 @@
 		1108C1941EA069C7006E6299 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1108C1861EA069C7006E6299 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		1108C1951EA069C7006E6299 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1108C1881EA069C7006E6299 /* View+MASAdditions.m */; };
 		1108C1961EA069C7006E6299 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1108C18B1EA069C7006E6299 /* ViewController+MASAdditions.m */; };
+		1108C19A1EA06C19006E6299 /* NSAttributedString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1108C1991EA06C19006E6299 /* NSAttributedString+Addition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,8 @@
 		1108C1891EA069C7006E6299 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		1108C18A1EA069C7006E6299 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		1108C18B1EA069C7006E6299 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		1108C1981EA06C19006E6299 /* NSAttributedString+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Addition.h"; sourceTree = "<group>"; };
+		1108C1991EA06C19006E6299 /* NSAttributedString+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Addition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		1108C12D1EA06674006E6299 /* ImageAndTextMixBtn */ = {
 			isa = PBXGroup;
 			children = (
+				1108C1971EA06BC3006E6299 /* Addition */,
 				1108C1711EA069C7006E6299 /* Masonry */,
 				1108C1311EA06674006E6299 /* AppDelegate.h */,
 				1108C1321EA06674006E6299 /* AppDelegate.m */,
@@ -157,6 +161,16 @@
 				1108C18A1EA069C7006E6299 /* ViewController+MASAdditions.h */,
 				1108C18B1EA069C7006E6299 /* ViewController+MASAdditions.m */,
 			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		1108C1971EA06BC3006E6299 /* Addition */ = {
+			isa = PBXGroup;
+			children = (
+				1108C1981EA06C19006E6299 /* NSAttributedString+Addition.h */,
+				1108C1991EA06C19006E6299 /* NSAttributedString+Addition.m */,
+			);
+			name = Addition;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -248,6 +262,7 @@
 				1108C18E1EA069C7006E6299 /* MASConstraint.m in Sources */,
 				1108C1901EA069C7006E6299 /* MASLayoutConstraint.m in Sources */,
 				1108C1301EA06674006E6299 /* main.m in Sources */,
+				1108C19A1EA06C19006E6299 /* NSAttributedString+Addition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
