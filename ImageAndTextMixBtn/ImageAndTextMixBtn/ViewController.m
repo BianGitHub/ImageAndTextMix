@@ -11,7 +11,7 @@
 #import "BottomView.h"
 #import "Masonry.h"
 
-@interface ViewController ()
+@interface ViewController ()<TopViewDelegate>
 
 @end
 
@@ -26,6 +26,7 @@
 
 - (void)setupUI {
     TopView *top = [[TopView alloc] init];
+    top.delegate = self;
     [self.view addSubview:top];
     
     BottomView *bottom = [[BottomView alloc] init];
@@ -41,6 +42,33 @@
         make.left.bottom.right.equalTo(self.view);
         make.top.equalTo(top.mas_bottom);
     }];
+}
+
+#pragma mark - delegate
+- (void)btnPush:(UIButton *)sender {
+    switch (sender.tag) {
+        case kBtn1:
+        {
+            NSLog(@"彩票");
+            UIViewController *VC = [[UIViewController alloc] init];
+            VC.view.backgroundColor = [UIColor whiteColor];
+            VC.navigationItem.title = @"push";
+            [self.navigationController pushViewController:VC animated:YES];
+            break;
+        }
+        case kBtn2:
+            NSLog(@"加油");
+            break;
+        case kBtn3:
+            NSLog(@"吃饭");
+            break;
+        case kBtn4:
+            NSLog(@"货运");
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

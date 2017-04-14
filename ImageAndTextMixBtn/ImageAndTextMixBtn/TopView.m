@@ -22,13 +22,13 @@
 - (void)setupUI {
     self.backgroundColor = [UIColor blackColor];
     
-    [self addButtons:@"image1" title:@"彩票"];
-    [self addButtons:@"image2" title:@"加油"];
-    [self addButtons:@"image3" title:@"吃饭"];
-    [self addButtons:@"image4" title:@"货运"];
+    [self addButtons:@"image1" title:@"彩票" tag:kBtn1];
+    [self addButtons:@"image2" title:@"加油" tag:kBtn2];
+    [self addButtons:@"image3" title:@"吃饭" tag:kBtn3];
+    [self addButtons:@"image4" title:@"货运" tag:kBtn4];
 }
 
-- (void)addButtons:(NSString *)imageName title:(NSString *)title {
+- (void)addButtons:(NSString *)imageName title:(NSString *)title tag:(TopViewBtn)tag{
     UIButton *btn = [[UIButton alloc] init];
     
     NSAttributedString *str = [NSAttributedString bl_imageTextWithImage:[UIImage imageNamed:imageName] imageWH:35 title:title fontSize:14 titleColor:[UIColor whiteColor] spacing:7];
@@ -40,6 +40,14 @@
     [btn sizeToFit];
     
     [self addSubview:btn];
+    
+    btn.tag = tag;
+    [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)clickBtn:(UIButton *)sender {
+//    NSLog(@"%zd", sender.tag);
+    [self.delegate btnPush:sender];
 }
 
 /*

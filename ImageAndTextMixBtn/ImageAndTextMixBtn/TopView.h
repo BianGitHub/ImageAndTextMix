@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TopView : UIView
+typedef enum  NSUInter {
+    kBtn1 = 1,
+    kBtn2 = 2,
+    kBtn3 = 3,
+    kBtn4 = 4,
+}TopViewBtn;
 
+@protocol TopViewDelegate <NSObject>
+- (void)btnPush:(UIButton *)sender;
+@end
+@interface TopView : UIView
+@property(nonatomic, weak) id<TopViewDelegate> delegate;
 @end
